@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> KELOMPOK</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/icons/font/bootstrap-icons.min.css">
+    <script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
+    <style>
+ /* Sembunyikan semua section secara default */
+.hidden-section {
+    display: none !important;
+}
+
+/* Tampilkan hanya section aktif */
+.active {
+    display: block ;
+}
+
+/* Scoped styles for the Home section only */
+#home {
+    position: relative;
+    color: white;
+  }
+
+  .home-section h1,
+  .home-section h3 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Animation for fading in the text */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .animated {
+    animation-name: fadeIn;
+  }
+
+  /* Animation for call-to-action button */
+  .home-btn:hover {
+    background-color: #721d1d;
+    transform: translateY(-5px);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .floating-icons i:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Make sure icons are properly aligned */
+  .floating-icons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .floating-icons i {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .floating-icons i:hover {
+    transform: translateY(-5px);
+  }
+    </style>
+  </head>
+  <body>
+   
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#home" onclick="showSection('home')">Deliciae jewelry</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#home" onclick="showSection('home')">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about" onclick="showSection('about')">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="#products" onclick="showSection('products')">Products</a></li>
+              <li class="nav-item"><a class="nav-link" href="#product-detail" onclick="showSection('product-detail')">Product Detail</a></li>
+              <li class="nav-item"><a class="nav-link" href="#cart" onclick="showSection('cart')"><i class="bi bi-cart-check-fill"></i></a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+     <!-- Home Section -->
+<section id="home" class="home-section active d-flex align-items-center justify-content-center text-center" 
+style="height: 100vh; background-image: url('cincin.jpg'); background-size: cover; background-position: center; position: relative; color: white;">
+
+<!-- Overlay Blur -->
+<div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px);"></div>
+
+<!-- Teks di Tengah -->
+<div class="position-relative text-center" style="z-index: 2;">
+  <!-- Main Heading with animation -->
+  <h1 class="display-4 fw-bold animated fadeIn" style="animation-duration: 2s;">
+    <i class="bi bi-balloon-heart-fill" style="color: #4e0a0a;"></i> Welcome to Deliciae Jewelry
+  </h1>
+
+  <!-- Subheading -->
+  <h3 class="lead" style="animation-duration: 2s; animation-delay: 1s; animation-name: fadeInUp;">
+    Berlian adalah simbol dari keabadian, kekuatan, dan cinta yang abadi. Di Deliciae kami memberikan kemewahan dari setiap ukirannya.
+  </h3>
+
+<!-- Call to Action Button (Anchor Link to Products) -->
+<a href="#products" onclick="showSection('products')" class="btn btn-light mt-4 home-btn" style="font-size: 1.2rem; padding: 1rem 2rem; border-radius: 30px; background-color: #4e0a0a; color: white; text-decoration: none;">
+  Explore Our Collection
+</a>
+</div>
+<!-- Icon Floating Animation -->
+<div class="floating-icons" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 2;">
+  <i class="bi bi-facebook" style="font-size: 2rem; margin-right: 10px; color: white; cursor: pointer; transition: transform 0.3s;"></i>
+  <i class="bi bi-instagram" style="font-size: 2rem; margin-right: 10px; color: white; cursor: pointer; transition: transform 0.3s;"></i>
+  <i class="bi bi-twitter" style="font-size: 2rem; color: white; cursor: pointer; transition: transform 0.3s;"></i>
+</div>
+
+</section>
+
+
+     <!-- About Us Section -->
+     <section id="about" class="hidden-section py-5 bg-light">
+      <div class="about" style="height: 100vh; background-color: #f0f0f0; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+        <!-- Teks Besar Transparan -->
+        <h1 style="font-size: 8rem; font-weight: bold; color: rgba(0, 0, 0, 0.05); margin: 0; position: relative; text-align: center;">
+          Know Us More
+        </h1>
+        <!-- Teks Kecil -->
+        <h2 style="font-size: 2.5rem; font-weight: bold; color: #4e0a0a; position: relative; z-index: 2; text-align: center; margin-top: 20px;">
+          About Us
+        </h2>
+      </div>
+      
+      <!-- Gambar Cincin -->
+      <div style="display: flex; justify-content: center; align-items: center; height: 80vh; background-color: #f0f0f0; font-family: Arial, sans-serif;">
+        <div style="position: relative; display: inline-block; text-align: center;">
+          <img src="diamon.jpg" alt="Contoh Gambar" style="width: 1000px; height: 450px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">
+            Memberikan Kemewahan sejak
+            <h1> 2005</h1>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f0f0f0;">
+        <div style="display: flex; justify-content: space-between; align-items: stretch; height: 60vh; padding: 0 50px;">
+          
+          <!-- Langkah 1 -->
+          <div style="flex: 1; position: relative; text-align: center; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; margin: 0 10px;">
+            <div style="font-size: 4rem; color: #e0e0e0; font-weight: bold;">01</div>
+            <div style="font-size: 1.5rem; color: #333; margin: 10px 0;">Pemilihan Berlian</div>
+            <p style="font-size: 1rem; color: #666; line-height: 1.5;">
+              Setiap berlian yang kami pilih melalui proses pemilihan yang ketat, memastikan hanya kualitas terbaik yang mencapai tangan Anda.
+            </p>
+          </div>
+      
+          <!-- Langkah 2 -->
+          <div style="flex: 1; position: relative; text-align: center; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; margin: 0 10px;">
+            <div style="font-size: 4rem; color: #e0e0e0; font-weight: bold;">02</div>
+            <div style="font-size: 1.5rem; color: #333; margin: 10px 0;">Desain yang Unik</div>
+            <p style="font-size: 1rem; color: #666; line-height: 1.5;">
+              Kami percaya bahwa desain perhiasan adalah bentuk seni yang abadi, menciptakan keindahan yang unik untuk setiap pelanggan kami.
+            </p>
+          </div>
+      
+          <!-- Langkah 3 -->
+          <div style="flex: 1; position: relative; text-align: center; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; margin: 0 10px;">
+            <div style="font-size: 4rem; color: #e0e0e0; font-weight: bold;">03</div>
+            <div style="font-size: 1.5rem; color: #333; margin: 10px 0;">Proses Pembuatan</div>
+            <p style="font-size: 1rem; color: #666; line-height: 1.5;">
+              Perhiasan kami dibuat oleh pengrajin ahli, menggabungkan teknologi modern dengan keterampilan tradisional untuk menciptakan karya yang sempurna.
+            </p>
+          </div>
+      
+          <!-- Langkah 4 -->
+          <div style="flex: 1; position: relative; text-align: center; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; margin: 0 10px;">
+            <div style="font-size: 4rem; color: #e0e0e0; font-weight: bold;">04</div>
+            <div style="font-size: 1.5rem; color: #333; margin: 10px 0;">Sentuhan Akhir</div>
+            <p style="font-size: 1rem; color: #666; line-height: 1.5;">
+              Setiap perhiasan diberi sentuhan akhir yang sempurna, memastikan bahwa berlian berkilau di setiap sudutnya, memberikan kilauan yang tak tertandingi.
+            </p>
+          </div>
+        </div>
+      </div>      
+      
+      <!-- Deskripsi About Us -->
+      <div class="container" style="padding: 2rem 1rem; text-align: center;">
+        <p style="font-size: 1rem; color: #666;">We are a company dedicated to providing the best products and services to our customers.</p>
+      </div>
+    </section>
+
+
+    
+      <!-- Products Section -->
+      <section id="products" class="hidden-section py-5"style="background-color: #f0f0f0; padding: 5rem 1rem;">
+ 
+  <div class="products" style="height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; text-align: center;">
+
+    <!-- Teks Besar Transparan -->
+    <h1 style="font-size: 6rem; font-weight: bold; color: rgba(0, 0, 0, 0.1); margin: 0; position: relative;">
+      Discover Our Products
+    </h1>
+
+    <!-- Teks Kecil -->
+    <h2 style="font-size: 3rem; font-weight: bold; color: #4e0a0a; position: relative; z-index: 2; margin-top: 20px;">
+      Explore Our Collection
+    </h2>
+
+  </div>
+
+  <!-- Deskripsi Tentang Produk -->
+  <div class="container" style="text-align: center; max-width: 900px; margin: 0 auto;">
+    <p style="font-size: 1.2rem; color: #333; line-height: 1.8;">
+      Deliciae Jewelry menawarkan berbagai koleksi perhiasan berlian dan batu permata yang dipilih dengan teliti. Setiap produk kami dirancang untuk memberikan keindahan yang abadi, dengan kualitas terbaik dan desain yang elegan. Jelajahi koleksi kami dan temukan perhiasan yang sempurna untuk melengkapi momen istimewa Anda.
+    </p>
+  </div>
+
+        
+        <div class="container">
+          <h2 class="text-center">Our Products</h2>
+          <div class="row">
+
+            <h3 class="text-center text-uppercase my-5">MAN</h3>
+            <div class="row g-4">
+              
+            <div class="col-md-4">
+              <div class="card">
+                <img src="clk17.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body  text-center">
+                  <h5 class="card-title">Diamond Mens Ring DRS00986</h5>
+                  <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan karisma</p>
+                  <p class="card-text"><strong>Rp7.500,000</strong></p>
+                  <button class="btn btn-primary" onclick="addToCart('Diamond Mens Ring DRS00986', 7500000, 'clk17.jpg')">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+            <div class="card">
+              <img src="clk16.jpg" class="card-img-top" alt="Product 1">
+              <div class="card-body  text-center">
+                <h5 class="card-title">Diamond Mens Ring DRS00456</h5>
+                <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan karisma</p>
+                <p class="card-text"><strong>Rp8.900,000</strong></p>
+                <button class="btn btn-primary" onclick="addToCart('Diamond Mens Ring DRS004561', 8900000,'clk16.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+
+          </div>
+        </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="clk18.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body  text-center">
+                  <h5 class="card-title">Diamond Mens Ring DRS00068</h5>
+                  <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan karisma </p>
+                  <p class="card-text"><strong>Rp5.750,000</strong></p>
+                  <button class="btn btn-primary" onclick="addToCart('Diamond Mens Ring DRS00068', 5750000,'clk18.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+
+            </div>
+          </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="clk6.jpg" class="card-img-top" alt="Product 1">
+                  <div class="card-body  text-center">
+                    <h5 class="card-title">Diamond Mens Ring DRS00867</h5>
+                    <p class="card-text"> Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan karisma</p>
+                    <p class="card-text"><strong>Rp7.000,000</strong></p>
+                    <button class="btn btn-primary" onclick="addToCart('Diamond Mens Ring DRS00867',7000000, 'clk16.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+
+              </div>
+            </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="clk20.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body  text-center">
+                      <h5 class="card-title">Diamond Mens Ring DRS00089</h5>
+                      <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan karisma</p>
+                      <p class="card-text"><strong>Rp3.750,000</strong></p>
+                      <button class="btn btn-primary" onclick="addToCart('Diamond Mens Ring DRS00089',3750000 ,'clk20.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+
+                </div>
+              </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="clk10.jpg" class="card-img-top" alt="Product 1">
+                      <div class="card-body  text-center">
+                        <h5 class="card-title">Diamond Mens Ring DRS00574</h5>
+                        <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan karisma</p>
+                        <p class="card-text"><strong>Rp4.550,000</strong></p>
+                        <button class="btn btn-primary" onclick="addToCart('Diamond Mens Ring DRS00574', 4550000,'clk10.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+
+                  </div>
+                </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card">
+                        <img src="clk11.jpg" class="card-img-top" alt="Product 1">
+                        <div class="card-body  text-center">
+                          <h5 class="card-title">Diamond Mens Ring DRS00756</h5>
+                          <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan karisma</p>
+                          <p class="card-text"><strong>Rp9.200,000</strong></p>
+                          <button class="btn btn-primary" onclick="addToCart('Diamond Mens Ring DRS00756',9200000, 'clk11.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+
+                    </div>
+                  </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card">
+                          <img src="clk15.jpg" class="card-img-top" alt="Product 1">
+                          <div class="card-body  text-center">
+                            <h5 class="card-title">Diamond Mens Ring DRS00876</h5>
+                            <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan karisma</p>
+                            <p class="card-text"><strong>Rp4.750,000</strong></p>
+                            <button class="btn btn-primary" onclick="addToCart('Diamond Mens Ring DRS00876',4750000, 'clk15.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+
+                      </div>
+                    </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card">
+                            <img src="clk13.jpg" class="card-img-top" alt="Product 1">
+                            <div class="card-body  text-center">
+                              <h5 class="card-title">Diamond Mens Ring DRS00768</h5>
+                              <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan karisma</p>
+                              <p class="card-text"><strong>Rp6.050,000</strong></p>
+                              <button class="btn btn-primary" onclick="addToCart('Diamond Mens Ring DRS00768', 6050000,'clk13.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                        </div>
+                      </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card">
+                              <img src="lk1.jpg" class="card-img-top" alt="Product 1">
+                              <div class="card-body  text-center">
+                                <h5 class="card-title">Diamond mens necklace DRS00165</h5>
+                                <p class="card-text">Necklace dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                <p class="card-text"><strong>Rp4.800,000</strong></p>
+                                <button class="btn btn-primary" onclick="addToCart('Diamond mens necklace DRS00165', 4800000,'lk1.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                          </div>
+                        </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="card">
+                                <img src="lk2.jpg" class="card-img-top" alt="Product 1">
+                                <div class="card-body  text-center">
+                                  <h5 class="card-title">Diamond mens necklace DRS00645</h5>
+                                  <p class="card-text">Necklace dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                  <p class="card-text"><strong>Rp5.800,000</strong></p>
+                                  <button class="btn btn-primary" onclick="addToCart('Diamond mens necklace DRS00645', 5800000,'lk2.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                            </div>
+                          </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="card">
+                                  <img src="lk3.png" class="card-img-top" alt="Product 1">
+                                  <div class="card-body  text-center">
+                                    <h5 class="card-title">Diamond mens necklace DRS000876</h5>
+                                    <p class="card-text">Necklace dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                    <p class="card-text"><strong>Rp6.800,000</strong></p>
+                                    <button class="btn btn-primary" onclick="addToCart('Diamond mens necklace DRS000876', 6800000,'lk3.png')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                              </div>
+                            </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="card">
+                                    <img src="lk4.jpg" class="card-img-top" alt="Product 1">
+                                    <div class="card-body  text-center">
+                                      <h5 class="card-title">Diamond mens Bracelet DRS00268</h5>
+                                      <p class="card-text">Bracelet dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                      <p class="card-text"><strong>Rp5.000,000</strong></p>
+                                      <button class="btn btn-primary" onclick="addToCart('Diamond mens necklace DRS00268', 5000000,'lk4.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                </div>
+                              </div>
+                                  </div>
+                                  
+                                  <h3 class="text-center text-uppercase mb-4">Woman</h3>
+                                  <div class="row g-4">
+
+                          <div class="col-md-4">
+                            <div class="card">
+                              <img src="cwk13.jpg" class="card-img-top" alt="Product 1">
+                              <div class="card-body  text-center">
+                                <h5 class="card-title">Diamond Ladies Ring DRS00095</h5>
+                                <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                <p class="card-text"><strong>Rp3.000,000</strong></p>
+                                <button class="btn btn-primary" onclick="addToCart('Diamond Ladies Ring DRS00095', 3000000,'cwk13.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                          </div>
+                        </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="card">
+                              <img src="cwk12.jpg" class="card-img-top" alt="Product 1">
+                                <div class="card-body  text-center">
+                                  <h5 class="card-title">Diamond Ladies Ring DRS00034</h5>
+                                  <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                  <p class="card-text"><strong>Rp3.850,000</strong></p>
+                                  <button class="btn btn-primary" onclick="addToCart('Diamond Ladies Ring DRS00034', 3850000,'cwk12.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                            </div>
+                          </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="card">
+                                  <img src="cwk11.jpg" class="card-img-top" alt="Product 1">
+                                  <div class="card-body  text-center">
+                                    <h5 class="card-title">Diamond Ladies Ring DRS00045</h5>
+                                    <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                    <p class="card-text"><strong>Rp3.200,000</strong></p>
+                                    <button class="btn btn-primary" onclick="addToCart('Diamond Ladies Ring DRS00045', 3200000,'cwk11.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                              </div>
+                            </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="card">
+                                    <img src="cwk10.jpg" class="card-img-top" alt="Product 1">
+                                    <div class="card-body  text-center">
+                                      <h5 class="card-title">Diamond Ladies Ring DRS00985</h5>
+                                      <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                      <p class="card-text"><strong>Rp4.800,000</strong></p>
+                                      <button class="btn btn-primary" onclick="addToCart('Diamond Ladies Ring DRS00985', 4800000,'cwk10.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                </div>
+                              </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="card">
+                                      <img src="cwk23.jpg" class="card-img-top" alt="Product 1">
+                                      <div class="card-body  text-center">
+                                        <h5 class="card-title">Diamond Ladies Ring DRS00087</h5>
+                                        <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                        <p class="card-text"><strong>Rp10.800,000</strong></p>
+                                        <button class="btn btn-primary" onclick="addToCart('Diamond Ladies Ring DRS00087', 10800000,'cwk23.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                  </div>
+                                </div>
+                                    </div>
+                                  <div class="col-md-4">
+                                    <div class="card">
+                                      <img src="cwk9.jpg" class="card-img-top" alt="Product 1">
+                                      <div class="card-body  text-center">
+                                        <h5 class="card-title">Diamond Ladies Ring DRS00987</h5>
+                                        <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                        <p class="card-text"><strong>Rp5.500,000</strong></p>
+                                        <button class="btn btn-primary" onclick="addToCart('Diamond Ladies Ring DRS00987', 5500000,'cwk9.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                  </div>
+                                </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <div class="card">
+                                        <img src="cwk8.jpg" class="card-img-top" alt="Product 1">
+                                        <div class="card-body  text-center">
+                                          <h5 class="card-title">Diamond Ladies Ring DRS00052</h5>
+                                          <p class="card-text">Cincin dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                          <p class="card-text"><strong>Rp5.650,000</strong></p>
+                                          <button class="btn btn-primary" onclick="addToCart('Diamond Ladies Ring DRS00052', 5650000,'cwk8.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                    </div>
+                                  </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                        <div class="card">
+                                          <img src="cwk7.png" class="card-img-top" alt="Product 1">
+                                          <div class="card-body  text-center">
+                                            <h5 class="card-title">Diamond Ladies Pendant Cross </h5>
+                                            <p class="card-text">Pendant dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                            <p class="card-text"><strong>Rp8.050,000</strong></p>
+                                            <button class="btn btn-primary" onclick="addToCart('Diamond Ladies Pendant Cross CR008', 8050000,'cwk7.png')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                      </div>
+                                    </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <div class="card">
+                                            <img src="cwk21.jpg" class="card-img-top" alt="Product 1">
+                                            <div class="card-body  text-center">
+                                              <h5 class="card-title">Diamond Ladies Earrings DRS00698</h5>
+                                              <p class="card-text">Earrings dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                              <p class="card-text"><strong>Rp5.800,000</strong></p>
+                                              <button class="btn btn-primary" onclick="addToCart('Diamond Ladies Earrings DRS00698', 5800000,'cwk21.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                        </div>
+                                      </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <div class="card">
+                                              <img src="cwk22.png" class="card-img-top" alt="Product 1">
+                                              <div class="card-body  text-center">
+                                                <h5 class="card-title">Diamond Ladies Bracelet DRS00675</h5>
+                                                <p class="card-text">Bracelet dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                                <p class="card-text"><strong>Rp3.800,000</strong></p>
+                                                <button class="btn btn-primary" onclick="addToCart('Diamond Ladies Ring DRS00675', 3800000,'cwk22.png')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                          </div>
+                                        </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                              <div class="card">
+                                                <img src="cwk14.jpg" class="card-img-top" alt="Product 1">
+                                                <div class="card-body  text-center">
+                                                  <h5 class="card-title">Diamond Ladies necklace DRS00875</h5>
+                                                  <p class="card-text">Necklace dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                                  <p class="card-text"><strong>Rp5.200,000</strong></p>
+                                                  <button class="btn btn-primary" onclick="addToCart('Diamond Ladies necklace DRS00875', 5200000,'cwk14.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                            </div>
+                                          </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="card">
+                                                  <img src="cwk15.png" class="card-img-top" alt="Product 1">
+                                                  <div class="card-body  text-center">
+                                                    <h5 class="card-title">Diamond Ladies necklace DRS00065</h5>
+                                                    <p class="card-text">Necklace dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                                    <p class="card-text"><strong>Rp7.800,000</strong></p>
+                                                    <button class="btn btn-primary" onclick="addToCart('Diamond Ladies necklace DRS00065', 7800000,'cwk15.png')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                              </div>
+                                            </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                  <div class="card">
+                                                    <img src="cwk16.png" class="card-img-top" alt="Product 1">
+                                                    <div class="card-body text-center">
+                                                      <h5 class="card-title">Diamond Ladies necklace DRS008905</h5>
+                                                      <p class="card-text">Necklace dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                                      <p class="card-text"><strong>Rp5.400,000</strong></p>
+                                                      <button class="btn btn-primary" onclick="addToCart('Diamond Ladies necklace DRS008905', 5400000,'cwk16.png')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                                </div>
+                                              </div>
+                                                  </div>
+                                                  <div class="col-md-4">
+                                                    <div class="card">
+                                                      <img src="cwk15.jpg" class="card-img-top" alt="Product 1">
+                                                      <div class="card-body text-center">
+                                                        <h5 class="card-title">Diamond Ladies necklace DRS008905</h5>
+                                                        <p class="card-text">Necklace dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                                        <p class="card-text"><strong>Rp15.400,000</strong></p>
+                                                        <button class="btn btn-primary" onclick="addToCart('Diamond Ladies necklace DRS008905', 15400000,'cwk15.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                                  </div>
+                                                </div>
+                                                    </div>
+                                                  <div class="col-md-4">
+                                                    <div class="card">
+                                                      <img src="cwk17.png" class="card-img-top" alt="Product 1">
+                                                      <div class="card-body text-center ">
+                                                        <h5 class="card-title">Diamond Ladies necklace DRS00785</h5>
+                                                        <p class="card-text">Necklace dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                                        <p class="card-text"><strong>Rp6.000,000</strong></p>
+                                                        <button class="btn btn-primary" onclick="addToCart('Diamond Ladies necklace DRS00785', 6000000,'cwk17.png')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                                  </div>
+                                                </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                      <div class="card">
+                                                        <img src="cwk20.png" class="card-img-top" alt="Product 1">
+                                                        <div class="card-body  text-center">
+                                                          <h5 class="card-title">Diamond Ladies necklace DRS00450</h5>
+                                                          <p class="card-text">Necklace dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                                          <p class="card-text"><strong>Rp11.800,000</strong></p>
+                                                          <button class="btn btn-primary" onclick="addToCart('Diamond Ladies necklace DRS00450', 11800000,'cwk20.png')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                                    </div>
+                                                  </div>
+                                                      </div>
+                                                    <div class="col-md-4">
+                                                      <div class="card">
+                                                        <img src="cwk18.jpg" class="card-img-top" alt="Product 1">
+                                                        <div class="card-body text-center">
+                                                          <h5 class="card-title">Diamond Ladies Earrings DRS00103</h5>
+                                                          <p class="card-text">Earrings dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                                          <p class="card-text"><strong>Rp5.600,000</strong></p>
+                                                          <button class="btn btn-primary" onclick="addToCart('Diamond Ladies Earrings DRS00103', 5600000,'cwk18.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                                    </div>
+                                                  </div>
+                                                      </div>
+                                                      <div class="col-md-4">
+                                                        <div class="card">
+                                                          <img src="cwk19.jpg" class="card-img-top" alt="Product 1">
+                                                          <div class="card-body text-center">
+                                                            <h5 class="card-title">Diamond Ladies Earrings DRS00864</h5>
+                                                            <p class="card-text">Earrings dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                                            <p class="card-text"><strong>Rp4.900,000</strong></p>
+                                                            <button class="btn btn-primary" onclick="addToCart('Diamond Ladies Earrings DRS00864', 4900000,'cwk19.jpg')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                                      </div>
+                                                    </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                          <div class="card">
+                                                            <img src="cwk20.png" class="card-img-top" alt="Product 1">
+                                                            <div class="card-body text-center">
+                                                              <h5 class="card-title">Diamond Ladies Earrings DRS00456</h5>
+                                                              <p class="card-text">Earrings dengan kemewahan dan keindahan dari setiap ukirannya, yang dapat memancarkan keeleganan</p>
+                                                              <p class="card-text"><strong>Rp6.800,000</strong></p>
+                                                              <button class="btn btn-primary" onclick="addToCart('Diamond Ladies Earrings DRS00456', 6800000,'cwk20.png')">Add to Cart<i class="bi bi-cart-plus"></i> </button>
+                                                        </div>
+                                                      </div>
+                                                          </div>
+                                                          
+                                  </div>
+                                  
+      </section>
+  <!-- Product Detail Section -->
+<section id="product-detail" class="hidden-section" style="background-color: #f0f0f0; font-family: Arial, sans-serif;">
+  <div class="container" style="padding: 5rem 1rem;">
+    <!-- Title of the Product -->
+    <h3 class="text-center" style="font-weight: bold; font-size: 2.5rem; color: #4e0a0a; margin-bottom: 3rem;">
+      Cincin Berlian dengan Kombinasi Batu Permata yang Cantik dan Unik
+    </h3>
+
+    <div class="product-detail-wrapper" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+
+      <!-- Product Image Gallery -->
+      <div style="flex: 1 1 450px; text-align: center;">
+        <img 
+          src="diamon.jpg" 
+          alt="Diamond" 
+          style="width: 100%; height: auto; max-width: 1000px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 2rem; transition: transform 0.3s ease;">
+        <div class="gallery">
+          <img src="clk11.jpg" alt="Product Image" style="width: 80px; height: 80px; margin: 5px; border-radius: 5px; cursor: pointer;">
+          <img src="lk3.png" alt="Product Image" style="width: 80px; height: 80px; margin: 5px; border-radius: 5px; cursor: pointer;">
+          <img src="cwk16.png" alt="Product Image" style="width: 80px; height: 80px; margin: 5px; border-radius: 5px; cursor: pointer;">
+          <img src="clk6.jpg" alt="Product Image" style="width: 80px; height: 80px; margin: 5px; border-radius: 5px; cursor: pointer;">          
+          <img src="cwk15.jpg" alt="Product Image" style="width: 80px; height: 80px; margin: 5px; border-radius: 5px; cursor: pointer;">
+        </div>
+      </div>
+
+      <!-- Product Description -->
+      <div style="flex: 1 1 450px; max-width: 500px; text-align: left; padding: 1rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <p style="font-size: 1.2rem; color: #333; line-height: 1.6; text-align: justify;">
+          Cincin berlian telah lama menjadi lambang keindahan dan kemewahan. Namun, keindahan ini dapat semakin diperkaya dengan mengkombinasikan berlian dengan berbagai batu permata lainnya. Kombinasi ini tidak hanya menambah warna dan kilauan, tetapi juga menciptakan tampilan yang unik dan personal.
+        </p>
+        <p style="font-size: 1.2rem; color: #333; line-height: 1.6; text-align: justify;">
+          Kami menyediakan segala jenis perhiasan dengan kombinasi berlian dengan batu permata, serta keindahan dan keunikan yang ditawarkan oleh setiap kombinasi. Kami juga memberikan keindahan dari setiap ukiran produk kami, memastikan setiap cincin adalah karya seni yang sempurna.
+        </p>
+
+        <!-- Rating -->
+        <div class="product-rating" style="margin-top: 1rem;">
+          <span style="color: #FFD700; font-size: 1.5rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span style="font-size: 1rem; color: #888;">(5/5)</span>
+        </div>
+
+        <!-- Specifications or Features -->
+        <div class="product-specifications" style="margin-top: 1.5rem;">
+          <h4 style="font-size: 1.4rem; color: #4e0a0a; font-weight: bold;">Keunggulan Produk di Deliciae jewelry:</h4>
+          <ul style="font-size: 1.1rem; color: #333; list-style-type: disc; margin-left: 20px;">
+            <li>Desain yang elegan dengan kombinasi batu permata</li>
+            <li>Memiliki kualitas berlian yang terjamin</li>
+            <li>Diproses oleh pengrajin ahli yang berpengalaman</li>
+            <li>Dirancang untuk memberikan kilau yang luar biasa</li>
+          </ul>
+        </div>
+
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+
+       
+<!-- Contact Section -->
+<section id="contact" class="hidden-section py-5 bg-light">
+  <div class="about" style="height: 100vh; background-color: #f0f0f0; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+    <!-- Teks Besar Transparan -->
+    <h1 style="font-size: 8rem; font-weight: bold; color: rgba(0, 0, 0, 0.05); margin: 0; position: relative; text-align: center;">
+      get in touch
+    </h1>
+    <!-- Teks Kecil -->
+    <h2 style="font-size: 2.5rem; font-weight: bold; color: #4e0a0a; position: relative; z-index: 2; text-align: center; margin-top: 20px;">
+      Contact Us
+    </h2>
+  </div>
+    <div class="row">
+      <!-- Contact Info -->
+      <div class="col-md-6">
+        <h4 class="mb-3" style="font-weight: bold; color: #4e0a0a;">Contact Information</h4>
+        <p class="mb-4" style="font-size: 1.1rem; color: #555;">
+          Have any questions? Feel free to reach out to us using the details below, or use the form on the right to send us a message.
+        </p>
+
+        <ul class="list-unstyled">
+          <li><i class="bi bi-telephone" style="color: #4e0a0a;"></i> <strong>Phone:</strong> (+62) 834 2626 2890</li>
+          <li><i class="bi bi-envelope" style="color: #4e0a0a;"></i> <strong>Email:</strong> Bitha@deliciaejewelry.com</li>
+          <li><i class="bi bi-geo-alt" style="color: #4e0a0a;"></i> <strong>Address:</strong> 123 Jewelry Avenue, Indonesia, Medan, Medan belawan</li>
+        </ul>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <h4 class="mb-3" style="font-weight: bold; color: #4e0a0a;">Send Us a Message</h4>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" required placeholder="Your Name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" required placeholder="Your Email">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" required placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <p style="font-size: 1.1rem; color: #555;">You can also follow us on social media:</p>
+      <div>
+        <a href="#" class="text-dark me-4"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
+        <a href="#" class="text-dark me-4"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+        <a href="#" class="text-dark me-4"><i class="bi bi-twitter" style="font-size: 1.5rem;"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-youtube" style="font-size: 1.5rem;"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <section id="cart" class=" hidden-section py-5" >
+        <div class="container">
+          <h2 class="text-center mb-4">Keranjang Anda</h2>
+          <div class="table-responsive">
+            <table class="table table-bordered text-center">
+              <thead class="thead-light">
+                <tr>
+                  <th>Gambar</th>
+                  <th>Produk</th>
+                  <th>Harga</th>
+                  <th>Pilih</th>
+                  <th>Hapus</th>
+                </tr>
+              </thead>
+              <tbody id="cartItems">
+                <!-- Produk akan diisi melalui JavaScript -->
+              </tbody>
+            </table>
+          </div>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-secondary btn-lg" onclick="showSection('home')">Kembali ke Beranda</button>
+            <button class="btn btn-primary btn-lg" onclick="checkout()">Checkout</button>
+          </div>
+        </div>
+      </section>
+      
+      <section id="pembayaran" class="hidden-section py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Pembayaran</h2>
+          <h4 class="text-muted mb-3">Keranjang Anda</h4>
+          <div class="table-responsive">
+            <table class="table table-bordered text-center">
+              <thead class="thead-light">
+                <tr>
+                  <th>Gambar</th>
+                  <th>Produk</th>
+                  <th>Harga</th>
+                </tr>
+              </thead>
+              <tbody id="checkoutItems">
+                <!-- Produk yang dipilih akan diisi melalui JavaScript -->
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th colspan="2">Total (Rp)</th>
+                  <th id="totalPrice" class="text-end">Rp 0</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <h4 class="mb-3 mt-4">Pilih Metode Pembayaran</h4>
+          <div class="form-check">
+            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" value="creditCard" onchange="togglePaymentMethod()" required>
+            <label class="form-check-label" for="credit">Kartu Kredit</label>
+          </div>
+          <div class="form-check">
+            <input id="cod" name="paymentMethod" type="radio" class="form-check-input" value="cod" onchange="togglePaymentMethod()" required>
+            <label class="form-check-label" for="cod">COD (Bayar di Tempat)</label>
+          </div>
+          <div id="credit-details" class="mt-3" style="display: none;">
+            <h4>Detail Kartu Kredit</h4>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="cc-name">Nama di Kartu</label>
+                <input type="text" class="form-control" id="cc-name" placeholder="Nama lengkap" required oninput="togglePaymentButton()">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cc-number">Nomor Kartu Kredit</label>
+                <input type="text" class="form-control" id="cc-number" placeholder="Nomor kartu" required oninput="togglePaymentButton()">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">Masa Berlaku</label>
+                <input type="text" class="form-control" id="cc-expiration" placeholder="MM/YY" required oninput="togglePaymentButton()">
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="cc-cvv">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="CVV" required oninput="togglePaymentButton()">
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-secondary mt-3" onclick="showSection('cart')">Kembali ke Keranjang</button>
+            <button id="paymentBtn" class="btn btn-primary btn-lg mt-4" onclick="processPayment()" disabled>Lanjutkan ke Pembayaran</button>
+          </div>
+        </div>
+      </section>
+      
+      <footer class="bg-light text-dark py-5">
+        <div class="container">
+          <div class="row">
+            <!-- Categories -->
+            <div class="col-md-3">
+              <h6 class="fw-bold">Collections</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-decoration-none text-dark">Engagement Rings</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Wedding Bands</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Earrings</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Necklaces</a></li>
+              </ul>
+            </div>
+      
+            <!-- Business -->
+            <div class="col-md-3">
+              <h6 class="fw-bold">Our Brand</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-decoration-none text-dark">About Us</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Sustainability</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Craftsmanship</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Media & News</a></li>
+              </ul>
+            </div>
+      
+            <!-- About -->
+            <div class="col-md-3">
+              <h6 class="fw-bold">Customer Care</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-decoration-none text-dark">FAQs</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Shipping & Returns</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Jewelry Care</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Contact Us</a></li>
+              </ul>
+            </div>
+      
+            <!-- Useful Links -->
+            <div class="col-md-3">
+              <h6 class="fw-bold">Follow Us</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-decoration-none text-dark"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
+                <li><a href="#" class="text-decoration-none text-dark"><i class="bi bi-facebook me-2"></i>Facebook</a></li>
+                <li><a href="#" class="text-decoration-none text-dark"><i class="bi bi-twitter me-2"></i>Twitter</a></li>
+                <li><a href="#" class="text-decoration-none text-dark"><i class="bi bi-youtube me-2"></i>YouTube</a></li>
+              </ul>
+            </div>
+          </div>
+      
+          <div class="row mt-4">
+            <div class="col-md-6 text-start">
+              <p class="mb-0">&copy; 2024 Deliciae Jewelry. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-end">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-dark me-2"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-dark me-2"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="text-dark"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      <script>
+
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+        section.classList.add('hidden-section'); // Sembunyikan semua section
+        if (section.id === sectionId) {
+            section.classList.add('active');
+             section.classList.remove('hidden-section');
+        }
+    });
+    // Khusus untuk halaman keranjang dan pembayaran
+    if (sectionId === 'cart') updateCart();
+    if (sectionId === 'pembayaran') loadCheckoutDetails();
+}
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      
+        // Menyimpan data keranjang ke localStorage
+        function saveCart() {
+          localStorage.setItem('cart', JSON.stringify(cart));
+        }
+      
+        // Tambah produk ke keranjang
+        function addToCart(name, price, image) {
+          cart.push({ name, price, image, selected: false });
+          saveCart();
+          alert(`${name} berhasil ditambahkan ke keranjang!`);
+          updateCart();
+        }
+      
+        
+        // Perbarui isi keranjang
+        function updateCart() {
+          const cartItems = document.getElementById('cartItems');
+          cartItems.innerHTML = '';
+          let total = 0;
+      
+          cart.forEach((item, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td><img src="${item.image}" alt="${item.name}" width="50" height="50"></td>
+              <td>${item.name}</td>
+              <td class="text-end">Rp ${item.price.toLocaleString()}</td>
+              <td><input type="checkbox" onchange="toggleSelection(${index})" ${item.selected ? 'checked' : ''}></td>
+              <td><button class="btn btn-danger" onclick="removeFromCart('${item.name}')"><i class="bi bi-trash3-fill"></i>Hapus</button></td>
+
+            `;
+            cartItems.appendChild(row);
+            if (item.selected) total += item.price;
+          });
+      
+          document.getElementById('totalPrice').textContent = `Rp ${total.toLocaleString()}`;
+        }
+        
+       // Fungsi untuk menghapus produk dari keranjang
+    function removeFromCart(name) {
+      const index = cart.findIndex(item => item.name === name);
+      if (index !== -1) {
+        cart.splice(index, 1);
+        updateCart();
+      }
+    }
+
+        // Pilih barang di keranjang
+        function toggleSelection(index) {
+          cart[index].selected = !cart[index].selected;
+          saveCart();
+          updateCart();
+        }
+      
+        // Checkout barang yang dipilih
+        function checkout() {
+          const selectedItems = cart.filter(item => item.selected);
+          if (selectedItems.length === 0) {
+            alert('Pilih barang terlebih dahulu untuk checkout!');
+            return;
+          }
+      
+          const total = selectedItems.reduce((sum, item) => sum + item.price, 0);
+          localStorage.setItem('checkoutItems', JSON.stringify(selectedItems));
+          localStorage.setItem('checkoutTotal', total);
+      
+          // Hapus barang yang sudah dipilih dari keranjang
+          for (let i = cart.length - 1; i >= 0; i--) {
+            if (cart[i].selected) {
+              cart.splice(i, 1);
+            }
+          }
+          saveCart(); // Perbarui keranjang setelah menghapus barang yang dipilih
+      
+          showSection('pembayaran');
+        }
+      
+        // Load detail pembayaran
+        function loadCheckoutDetails() {
+          const checkoutItems = JSON.parse(localStorage.getItem('checkoutItems')) || [];
+          const checkoutTotal = localStorage.getItem('checkoutTotal') || 0;
+          const checkoutList = document.getElementById('checkoutItems');
+          const totalElement = document.getElementById('totalPrice');
+      
+          checkoutList.innerHTML = '';
+          checkoutItems.forEach(item => {
+            const listItem = document.createElement('tr');
+            listItem.innerHTML = `
+              <td><img src="${item.image}" alt="${item.name}" width="50" height="50"></td>
+              <td>${item.name}</td>
+              <td class="text-end">Rp ${item.price.toLocaleString()}</td>
+            `;
+            checkoutList.appendChild(listItem);
+          });
+      
+          totalElement.textContent = `Rp ${parseInt(checkoutTotal).toLocaleString()}`;
+        }
+      
+        // Toggle metode pembayaran
+        function togglePaymentMethod() {
+          const selectedMethod = document.querySelector('input[name="paymentMethod"]:checked');
+          const paymentBtn = document.getElementById('paymentBtn');
+          const creditDetails = document.getElementById('credit-details');
+      
+          if (selectedMethod.value === 'creditCard') {
+            creditDetails.style.display = 'block';
+          } else {
+            creditDetails.style.display = 'none';
+          }
+      
+          paymentBtn.disabled = !selectedMethod || (selectedMethod.value === 'creditCard' && !validateCreditCardDetails());
+        }
+      
+        // Validasi detail kartu kredit
+        function validateCreditCardDetails() {
+          const ccName = document.getElementById('cc-name').value.trim();
+          const ccNumber = document.getElementById('cc-number').value.trim();
+          const ccExpiration = document.getElementById('cc-expiration').value.trim();
+          const ccCvv = document.getElementById('cc-cvv').value.trim();
+          return ccName && ccNumber && ccExpiration && ccCvv;
+        }
+      
+        // Update tombol lanjutkan pembayaran
+        function togglePaymentButton() {
+          const paymentBtn = document.getElementById('paymentBtn');
+          const selectedMethod = document.querySelector('input[name="paymentMethod"]:checked');
+          paymentBtn.disabled = !selectedMethod || (selectedMethod.value === 'creditCard' && !validateCreditCardDetails());
+        }
+      
+        // Proses pembayaran
+        function processPayment() {
+          const selectedMethod = document.querySelector('input[name="paymentMethod"]:checked');
+          if (!selectedMethod) {
+            alert('Pilih metode pembayaran terlebih dahulu!');
+            return;
+          }
+      
+          alert('Checkout berhasil! Anda akan diarahkan ke halaman utama.');
+          localStorage.removeItem('checkoutItems');
+          localStorage.removeItem('checkoutTotal');
+          showSection('home');
+        }
+      
+        // Inisialisasi halaman keranjang saat pertama kali dimuat
+        updateCart();
+      </script>
+      
+      </body>
+      </html>
+      
